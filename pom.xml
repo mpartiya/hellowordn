@@ -43,8 +43,11 @@
 				<version>3.0.0</version>
 				<extensions>true</extensions>
 				<configuration>
+				   <runtimeProduct>MULE_EE</runtimeProduct>
 					<classifier>mule-application</classifier>
-							<runtimeFabricDeployment>
+					<sharedLibraries>
+					</sharedLibraries>
+					<runtimeFabricDeployment>
 								<applicationName>${build.name}</applicationName>
 								<muleVersion>4.3.0</muleVersion>
 								<username>${anypoint.username}</username>
