@@ -84,7 +84,7 @@
 									<env>${env}</env>
 									<key>${key}</key>
 								</properties>
-							</armDeployment>
+							</rtfDeployment>
 						</configuration>
 						<executions>
 							<execution>
