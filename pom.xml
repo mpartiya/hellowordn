@@ -61,9 +61,7 @@
 	</build>
 
 
-	<profiles>
-		<profile>
-			<id>rtf</id>
+	<id>rtf</id>
 			<build>
 				<plugins>
 					<plugin>
@@ -71,7 +69,8 @@
 						<artifactId>mule-maven-plugin</artifactId>
 						 <extensions>true</extensions>
 						<configuration>
-							<rtfDeployment>
+						<classifier>mule-application</classifier>
+							<runtimeFabricDeployment>
 								<applicationName>${build.name}</applicationName>
 								<muleVersion>4.3.0</muleVersion>
 								<username>${anypoint.username}</username>
@@ -79,14 +78,9 @@
 								<businessGroup>${anypoint.businessGroup}</businessGroup>
 								<uri>${anypoint.uri}</uri>
 								<target>${rtf.target.name}</target>
-								<targetType>${rtf.target.type}</targetType>
 								<environment>${rtf.environment}</environment>
 								<provider>MC</provider>
                                 <replicas>1</replicas>
-								<properties>
-									<env>${env}</env>
-									<key>${key}</key>
-								</properties>
 								<deploymentSettings>
                     <enforceDeployingReplicasAcrossNodes>false</enforceDeployingReplicasAcrossNodes>
                 <updateStrategy>recreate</updateStrategy>
@@ -108,8 +102,12 @@
           </inbound>
         </http>
       </deploymentSettings>
-	       </rtfDeployment>
-						</configuration>
+	   <properties>
+		<env>${env}</env>
+		<key>${key}</key>
+		</properties>
+	        </runtimeFabricDeployment>
+			</configuration>
 						<executions>
 							<execution>
 								<id>deploy</id>
@@ -122,8 +120,6 @@
 					</plugin>
 				</plugins>
 			</build>
-		</profile>
-	</profiles>
 
 	<dependencies>
 		<dependency>
