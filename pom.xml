@@ -45,8 +45,7 @@
 				<configuration>
 				    <runtimeProduct>MULE_EE</runtimeProduct>
 					<classifier>mule-application</classifier>
-					    <sharedLibraries>
-						<sharedLibrary>
+					    
 							<runtimeFabricDeployment>
 								<applicationName>${build.name}</applicationName>
 								<muleVersion>4.3.0</muleVersion>
