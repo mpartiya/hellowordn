@@ -43,11 +43,8 @@
 				<version>3.0.0</version>
 				<extensions>true</extensions>
 				<configuration>
-				   <runtimeProduct>MULE_EE</runtimeProduct>
 					<classifier>mule-application</classifier>
-					<sharedLibraries>
-					</sharedLibraries>
-					<runtimeFabricDeployment>
+							<runtimeFabricDeployment>
 								<applicationName>${build.name}</applicationName>
 								<muleVersion>4.3.0</muleVersion>
 								<username>${anypoint.username}</username>
@@ -97,70 +94,6 @@
 			</plugin>
 		</plugins>
 	</build>
-
-	<dependencies>
-		<dependency>
-			<groupId>org.sonarsource.scanner.maven</groupId>
-			<artifactId>sonar-maven-plugin</artifactId>
-			<version>3.6.1.1688</version>
-		</dependency>
-		<dependency>
-			<groupId>org.mule.modules</groupId>
-			<artifactId>mule-compression-module</artifactId>
-			<version>2.1.1</version>
-			<classifier>mule-plugin</classifier>
-		</dependency>
-		<dependency>
-			<groupId>com.mulesoft.connectors</groupId>
-			<artifactId>anypoint-mq-connector</artifactId>
-			<version>3.1.0</version>
-			<classifier>mule-plugin</classifier>
-		</dependency>
-
-
-		<dependency>
-			<groupId>com.mulesoft.munit</groupId>
-			<artifactId>munit-runner</artifactId>
-			<version>2.2.4</version>
-			<classifier>mule-plugin</classifier>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.mulesoft.munit</groupId>
-			<artifactId>munit-tools</artifactId>
-			<version>2.2.4</version>
-			<classifier>mule-plugin</classifier>
-			<scope>test</scope>
-		</dependency>
-
-
-		<dependency>
-			<groupId>com.mulesoft.modules</groupId>
-			<artifactId>mule-secure-configuration-property-module</artifactId>
-			<version>1.2.3</version>
-			<classifier>mule-plugin</classifier>
-		</dependency>
-		<dependency>
-			<groupId>org.mule.connectors</groupId>
-			<artifactId>mule-jms-connector</artifactId>
-			<version>1.7.0</version>
-			<classifier>mule-plugin</classifier>
-		</dependency>
-		<dependency>
-			<groupId>org.mule.connectors</groupId>
-			<artifactId>mule-sockets-connector</artifactId>
-			<version>1.2.0</version>
-			<classifier>mule-plugin</classifier>
-		</dependency>
-		<dependency>
-			<groupId>org.mule.connectors</groupId>
-			<artifactId>mule-http-connector</artifactId>
-			<version>1.5.19</version>
-			<classifier>mule-plugin</classifier>
-		</dependency>
-
-
-	</dependencies>
 
 	<repositories>
 		<repository>
