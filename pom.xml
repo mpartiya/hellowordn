@@ -43,31 +43,7 @@
 				<version>3.0.0</version>
 				<extensions>true</extensions>
 				<configuration>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.mule.tools.maven</groupId>
-				<artifactId>mule-maven-plugin</artifactId>
-				<version>${mule.maven.plugin.version}</version>
-				<extensions>true</extensions>
-				<configuration>
-					<runtimeProduct>MULE_EE</runtimeProduct>
 					<classifier>mule-application</classifier>
-					<sharedLibraries>
-					</sharedLibraries>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
-
-      <build>
-				<plugins>
-					<plugin>
-						<groupId>org.mule.tools.maven</groupId>
-						<artifactId>mule-maven-plugin</artifactId>
-						 <extensions>true</extensions>
-						<configuration>
-						<classifier>mule-application</classifier>
 							<runtimeFabricDeployment>
 								<applicationName>${build.name}</applicationName>
 								<muleVersion>4.3.0</muleVersion>
@@ -115,9 +91,15 @@
 								</goals>
 							</execution>
 						</executions>
-					</plugin>
-				</plugins>
-			</build>
+				<configuration>
+					<runtimeProduct>MULE_EE</runtimeProduct>
+					<classifier>mule-application</classifier>
+					<sharedLibraries>
+					</sharedLibraries>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 	<dependencies>
 		<dependency>
