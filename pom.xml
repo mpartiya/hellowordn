@@ -55,23 +55,42 @@
 					<classifier>mule-application</classifier>
 					<sharedLibraries>
 					</sharedLibraries>
-					<runtimeFabricDeployment>
-      <uri>https://anypoint.mulesoft.com</uri>
-      <muleVersion>4.3.0</muleVersion>
-      <username>${anypoint.username}</username>
-      <password>${anypoint.password}</password>
-      <applicationName>${build.name}</applicationName>
-      <target>Azure-cni-rtf</target>
-      <environment>DPIS-Development</environment>
-      <provider>MC</provider>
-      <replicas>1</replicas>
-      <properties>
-        <key>${key}</key>
-      </properties>
-      <deploymentSettings>
-        <enforceDeployingReplicasAcrossNodes>false</enforceDeployingReplicasAcrossNodes>
-        <updateStrategy>recreate</updateStrategy>
-        <clustered>false</clustered>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+
+	<profiles>
+		<profile>
+			<id>rtf</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.mule.tools.maven</groupId>
+						<artifactId>mule-maven-plugin</artifactId>
+						 <extensions>true</extensions>
+						<configuration>
+							<rtfDeployment>
+								<applicationName>${build.name}</applicationName>
+								<muleVersion>4.3.0</muleVersion>
+								<username>${anypoint.username}</username>
+								<password>${anypoint.password}</password>
+								<businessGroup>${anypoint.businessGroup}</businessGroup>
+								<uri>${anypoint.uri}</uri>
+								<target>${rtf.target.name}</target>
+								<targetType>${rtf.target.type}</targetType>
+								<environment>${rtf.environment}</environment>
+								<provider>MC</provider>
+                                <replicas>1</replicas>
+								<properties>
+									<env>${env}</env>
+									<key>${key}</key>
+								</properties>
+								<deploymentSettings>
+                    <enforceDeployingReplicasAcrossNodes>false</enforceDeployingReplicasAcrossNodes>
+                <updateStrategy>recreate</updateStrategy>
+                <clustered>false</clustered>
         <forwardSslSession>false</forwardSslSession>
         <lastMileSecurity>false</lastMileSecurity>
         <resources>
@@ -89,12 +108,22 @@
           </inbound>
         </http>
       </deploymentSettings>
-    </runtimeFabricDeployment>
-  </configuration>
-			</plugin>
-		</plugins>
-	</build>
-
+	       </rtfDeployment>
+						</configuration>
+						<executions>
+							<execution>
+								<id>deploy</id>
+								<phase>deploy</phase>
+								<goals>
+									<goal>deploy</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 
 	<dependencies>
 		<dependency>
