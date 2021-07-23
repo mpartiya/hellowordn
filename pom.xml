@@ -60,9 +60,7 @@
 		</plugins>
 	</build>
 
-
-	<id>rtf</id>
-			<build>
+      <build>
 				<plugins>
 					<plugin>
 						<groupId>org.mule.tools.maven</groupId>
