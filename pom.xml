@@ -55,17 +55,7 @@
 					<classifier>mule-application</classifier>
 					<sharedLibraries>
 					</sharedLibraries>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
-
-<plugin>
-  <groupId>org.mule.tools.maven</groupId>
-  <artifactId>mule-maven-plugin</artifactId>
-  <extensions>true</extensions>
-  <configuration>
-    <runtimeFabricDeployment>
+					<runtimeFabricDeployment>
       <uri>https://anypoint.mulesoft.com</uri>
       <muleVersion>4.3.0</muleVersion>
       <username>${anypoint.username}</username>
@@ -101,7 +91,10 @@
       </deploymentSettings>
     </runtimeFabricDeployment>
   </configuration>
-</plugin>
+			</plugin>
+		</plugins>
+	</build>
+
 
 	<dependencies>
 		<dependency>
