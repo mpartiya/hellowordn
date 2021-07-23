@@ -70,7 +70,7 @@
 						<groupId>org.mule.tools.maven</groupId>
 						<artifactId>mule-maven-plugin</artifactId>
 						<configuration>
-							<armDeployment>
+							<rtfDeployment>
 								<applicationName>${build.name}</applicationName>
 								<muleVersion>${app.runtime}</muleVersion>
 								<username>${anypoint.username}</username>
