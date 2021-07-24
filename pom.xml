@@ -16,8 +16,8 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<app.runtime>4.3.0</app.runtime>
-		<mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>
-		<mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>
+		<mule.maven.plugin.version>3.4.2</mule.maven.plugin.version>
+		<mule.maven.plugin.version>3.4.2</mule.maven.plugin.version>
 		<anypoint.username>${ANYPOINT_USERNAME}</anypoint.username>
 		<anypoint.password>${ANYPOINT_PASSWORD}</anypoint.password>
 		<anypoint.uri>https://anypoint.mulesoft.com</anypoint.uri>
