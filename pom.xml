@@ -46,7 +46,8 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<extensions>true</extensions>
 				<version>${mule.maven.plugin.version}</version>
-				<configuration>				    
+				<configuration>
+                   <classifier>mule-application</classifier>				
 							<runtimeFabricDeployment>
 							    <classifier>mule-application</classifier>
 								<applicationName>${build.name}</applicationName>
