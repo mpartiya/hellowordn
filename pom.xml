@@ -48,6 +48,7 @@
 				<version>${mule.maven.plugin.version}</version>
 				<configuration>				    
 							<runtimeFabricDeployment>
+							    <classifier>mule-application</classifier>
 								<applicationName>${build.name}</applicationName>
 								<muleVersion>4.3.0</muleVersion>
 								<username>${anypoint.username}</username>
@@ -88,10 +89,35 @@
 		</plugin>
 		</plugins>
 	</build>
-	<pluginRepositories>
-  <pluginRepository>
-    <id>mule-public</id>
-    <url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
-  </pluginRepository>
-</pluginRepositories>
+	<repositories>
+          <repository>
+            <id>anypoint-exchange-v2</id>
+            <name>Anypoint Exchange</name>
+            <url>https://maven.anypoint.mulesoft.com/api/v2/maven</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <id>mulesoft-releases</id>
+            <name>MuleSoft Releases Repository</name>
+            <url>https://repository.mulesoft.org/releases/</url>
+            <layout>default</layout>
+        </repository>
+		<repository>
+		<id>anypoint-exchange</id>
+      <name>Exchange Repository</name>
+      <url>https://maven.anypoint.mulesoft.com/api/v1/organizations/22666961-71e7-4619-a324-f42a744b3fd1/maven</url>
+	  </repositories>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>mulesoft-releases</id>
+            <name>mulesoft release repository</name>
+            <layout>default</layout>
+            <url>https://repository.mulesoft.org/releases/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+	
 </project>
