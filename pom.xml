@@ -37,7 +37,7 @@
 		<finalName>${build.name}</finalName>
 		<plugins>
 			<plugin>
-				<groupId>org.mule.tools.maven</groupId>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-clean-plugin</artifactId>
 				<version>3.0.0</version>
 			</plugin>
@@ -46,9 +46,8 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<extensions>true</extensions>
 				<version>${mule.maven.plugin.version}</version>
-				<configuration>		
+				<configuration>				    
 							<runtimeFabricDeployment>
-							    <classifier>mule-application</classifier>
 								<applicationName>${build.name}</applicationName>
 								<muleVersion>4.3.0</muleVersion>
 								<username>${anypoint.username}</username>
@@ -89,15 +88,7 @@
 		</plugin>
 		</plugins>
 	</build>
-	<repositories>
-          <repository>
-            <id>anypoint-exchange</id>
-            <name>Exchange Repository</name>
-            <url>https://maven.anypoint.mulesoft.com/api/v1/organizations/22666961-71e7-4619-a324-f42a744b3fd1/maven</url>
-			<layout>default</layout>
-        </repository>		    
-    </repositories>
-  	<pluginRepositories>
+	<pluginRepositories>
   <pluginRepository>
     <id>mule-public</id>
     <url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
