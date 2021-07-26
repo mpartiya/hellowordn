@@ -56,7 +56,7 @@
 								<uri>https://anypoint.mulesoft.com</uri>
 								<target>${rtf.target.name}</target>
 								<environment>${rtf.environment}</environment>
-								<provider>RR</provider>
+								<provider>MC</provider>
                                 <replicas>1</replicas>
 								<deploymentSettings>
                     <enforceDeployingReplicasAcrossNodes>false</enforceDeployingReplicasAcrossNodes>
@@ -75,7 +75,7 @@
         </resources>
         <http>
           <inbound>
-            <publicUrl>url</publicUrl>
+            <publicUrl>https://rtfaksmule.emerson.com</publicUrl>
           </inbound>
         </http>
       </deploymentSettings>
