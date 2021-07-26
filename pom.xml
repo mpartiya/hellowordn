@@ -56,7 +56,7 @@
 								<uri>https://anypoint.mulesoft.com</uri>
 								<target>${rtf.target.name}</target>
 								<environment>${rtf.environment}</environment>
-								<provider>MC</provider>
+								<provider>RR</provider>
                                 <replicas>1</replicas>
 								<deploymentSettings>
                     <enforceDeployingReplicasAcrossNodes>false</enforceDeployingReplicasAcrossNodes>
