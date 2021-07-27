@@ -90,8 +90,6 @@
 		</plugins>
 	</build>
 	
-</profile>
-	</profiles>
 	<dependencies>
 		<dependency>
 			<groupId>org.sonarsource.scanner.maven</groupId>
