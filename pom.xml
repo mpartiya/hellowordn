@@ -94,4 +94,12 @@
     <url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
   </pluginRepository>
 </pluginRepositories>
+<distributionManagement>
+      <repository>
+         <id>anypoint-exchange</id>
+         <name>Exchange Repository</name>
+         <url>https://maven.anypoint.mulesoft.com/api/v1/organizations/22666961-71e7-4619-a324-f42a744b3fd1/maven</url>
+         <layout>default</layout>
+      </repository>
+   </distributionManagement>
 </project>
