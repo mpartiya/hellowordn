@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.mycompany</groupId>
+	<groupId>22666961-71e7-4619-a324-f42a744b3fd1</groupId>
 	<artifactId>helloword</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>mule-application</packaging>
@@ -50,6 +50,7 @@
 							<runtimeFabricDeployment>
 								<applicationName>${build.name}</applicationName>
 								<muleVersion>4.3.0</muleVersion>
+								<server>anypoint-exchange</server>
 								<username>${anypoint.username}</username>
 								<password>${anypoint.password}</password>
 								<businessGroup>${anypoint.businessGroup}</businessGroup>
