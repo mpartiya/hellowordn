@@ -165,4 +165,12 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
+	<distributionManagement>
+      <repository>
+         <id>anypoint-exchange</id>
+         <name>Exchange Repository</name>
+         <url>https://maven.anypoint.mulesoft.com/api/v2/maven</url>
+         <layout>default</layout>
+      </repository>
+   </distributionManagement>
 </project>

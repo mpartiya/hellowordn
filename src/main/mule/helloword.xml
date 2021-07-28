@@ -9,8 +9,8 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 		<http:listener-connection host="0.0.0.0" port="8091" />
 	</http:listener-config>
 	<flow name="hellowordFlow" doc:id="4b300f60-b7e1-42bb-8c1d-80fa3b41f653" >
-		<http:listener doc:name="Listener" doc:id="1d5ecef5-df06-4870-8521-a4cdcdcfa405" config-ref="HTTP_Listener_config" path="/helloworldn"/>
-		<set-payload value='#["HELLOWORLDNEW"]' doc:name="Set Payload" doc:id="e39cb763-a8ac-46f0-a0a5-ead9b6e94a25" />
+		<http:listener doc:name="Listener" doc:id="e87884f3-f25c-450b-91e2-de087a979097" config-ref="HTTP_Listener_config" path="/test"/>
+		<set-payload value='#["HELLO To All"]' doc:name="Set Payload" doc:id="e39cb763-a8ac-46f0-a0a5-ead9b6e94a25" />
 		<logger level="INFO" doc:name="Logger" doc:id="8f1ead2a-e253-4601-b81a-a17a4467574d" message='#[payload]'/>
 		<ee:transform doc:name="Transform Message" doc:id="3ce3cc37-a2a2-4a59-b729-9782b8571894" >
 			<ee:message >
