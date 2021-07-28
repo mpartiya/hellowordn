@@ -165,6 +165,24 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
+		<profiles>
+		<profile>
+			<distributionManagement>
+				<repository>
+					<id>MuleRepository</id>
+					<name>MuleRepository</name>
+					<url>https://repository.mulesoft.org/nexus-ee/content/repositories/releases-ee/</url>
+					<layout>default</layout>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</repository>
+			</distributionManagement>
+		</profile>
+	</profiles>
 	<distributionManagement>
       <repository>
          <id>anypoint-exchange</id>
