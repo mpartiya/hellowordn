@@ -30,7 +30,7 @@
 		<rtf.environment>${RTF_ENV}</rtf.environment>
 		<build.number>0</build.number>
 		<maven.build.timestamp.format>yyMMddHHmmss</maven.build.timestamp.format>
-		<build.name>${BUILD_NAME}</build.name>
+		<build.name>1.0</build.name>
 	</properties>
 
 	<build>
