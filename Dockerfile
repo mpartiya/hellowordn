@@ -10,7 +10,7 @@ RUN cd /opt && tar xvzf ~/mule-standalone-4.3.0-20210119.tar.gz && rm ~/mule-sta
 
 #Define environment variables.# Copy hello word app
 #COPY helloword.zip "/opt/mule/apps"
-COPY $(build.artifactstagingdirectory)\drop\target\1.0-mule-application.jar "/opt/mule/apps"
+COPY $(build.artifactstagingdirectory)/drop/target/1.0-mule-application.jar "/opt/mule/apps"
 #COPY helloword.jar "/opt/mule/apps"
 
 # Define working directory.
